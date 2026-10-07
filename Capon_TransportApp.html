@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DenzRide- Transportation App</title>
+</head>
+<body>
+
+  <header id="top">
+    <h1>DenzRide</h1>
+    <p><em>Go smoothly, reach safely.</em></p>
+    <nav>
+      <a href="#book">Book a Ride</a> |
+      <a href="#fleet">Our Vehicles</a> |
+      <a href="#media">Media</a> |
+      <a href="#schedule">Schedule</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+    <hr>
+  </header>
+
+  <main>
+<section id="book">
+    <h2>Book a Ride</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Trip Details</legend>
+
+        <p>
+          <label for="fullname">Full name:</label>
+          <input type="text" id="fullname" name="fullname" placeholder="Capon, Denise Gaile" required>
+        </p>
+
+        <p>
+          <label for="phone">Phone number:</label>
+          <input type="tel" id="phone" name="phone" placeholder="091234567" required>
+        </p>
+
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="you@gmail.com">
+        </p>
+
+        <p>
+          <label for="pickup">Pick-up location:</label>
+          <input type="text" id="pickup" name="pickup" list="places" placeholder="Choose or type a place">
+        </p>
+
+        <p>
+          <label for="dropoff">Drop-off location:</label>
+          <input type="text" id="dropoff" name="dropoff" list="places" placeholder="Choose or type a place">
+        </p>
+
+        <datalist id="places">
+          <option value="Burnham">
+          <option value="Mcdo">
+          <option value="Bell church">
+          <option value="John Hay">
+          <option value="Public Market">
+        </datalist>
+
+        <p>
+          <label for="date">Date:</label>
+          <input type="date" id="date" name="date" required>
+        </p>
+
+        <p>
+          <label for="time">Time:</label>
+          <input type="time" id="time" name="time" required>
+        </p>
+
+        <p>
+          <label for="passengers">Passengers:</label>
+          <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+        </p>
+
+        <p>
+          <label for="vehicle">Vehicle type:</label>
+          <select id="vehicle" name="vehicle">
+            <option value="taxi">Taxi</option>
+            <option value="van">Van</option>
+            <option value="shuttle">Shuttle Bus</option>
+          </select>
+        </p>
+
+        <p>
+          Payment method:
+          <input type="radio" id="pay-cash" name="payment" value="cash" checked>
+          <label for="pay-cash">Cash</label>
+          <input type="radio" id="pay-card" name="payment" value="card">
+          <label for="pay-card">Card</label>
+          <input type="radio" id="pay-ewallet" name="payment" value="ewallet">
+          <label for="pay-ewallet">E-Wallet</label>
+        </p>
+
+        <p>
+          Extras:
+          <input type="checkbox" id="extra-luggage" name="extras" value="luggage">
+          <label for="extra-luggage">Extra luggage</label>
+          <input type="checkbox" id="extra-child" name="extras" value="child-seat">
+          <label for="extra-child">Child seat</label>
+          <input type="checkbox" id="extra-wheelchair" name="extras" value="wheelchair">
+          <label for="extra-wheelchair">Wheelchair accessible</label>
+        </p>
+
+        <p>
+          <label for="notes">Notes for the driver:</label><br>
+          <textarea id="notes" name="notes" rows="4" cols="40" placeholder="Landmarks, sprcific places..."></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" id="terms" name="terms" required>
+          <label for="terms">I agree to the <a href="#terms-info">Terms &amp; Conditions</a></label>
+        </p>
+
+        <p>
+          <button type="submit">Book Now</button>
+          <button type="reset">Clear</button>
+        </p>
+      </fieldset>
+    </form>
+    <hr>
+  </section>
+
+  <section id="fleet">
+    <h2>Our Vehicles</h2>
+
+    <figure>
+      <img src="Taxi.jpg" alt="A yellow GoRide taxi parked at the curb" width="400" height="250">
+      <figcaption><strong>Taxi</strong> - Fast and comfortable for up to 4 passengers.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="van.jpg" alt="A white GoRide van with sliding doors" width="400" height="250">
+      <figcaption><strong>Van</strong> - ride for families and small groups.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="shuttleBus.jpg" alt="A GoRide shuttle bus on a city road" width="400" height="250">
+      <figcaption><strong>Shuttle Bus</strong> - Affordable seats for large groups and events.</figcaption>
+    </figure>
+
+    <hr>
+  </section>
+
+  <section id="media">
+    <h2>Media</h2>
+
+    <h3>How DenzRide Works (Video)</h3>
+    <video width="480" controls poster="https://youtu.be/GU16hXSSGKs?si=e-XTADzBe0jfppf1">
+      <source src="ride.mp4" type="video/mp4">
+      <source src="ride.ogg" type="video/ogg">
+    </video>
+
+    <h3>Driver Announcement (Audio)</h3>
+    <audio controls>
+      <source src="ridezz.mp3" type="audio/mpeg">
+      <source src="ridezz.ogg" type="audio/ogg">
+    </audio>
+
+    <h3>Watch on YouTube (Embedded)</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://youtu.be/GU16hXSSGKs?si=e-XTADzBe0jfppf1"
+      title="YouTube video player"
+      allowfullscreen>
+    </iframe>
+    <hr>
+  </section>
+
+  <section id="schedule">
+    <h2>Schedule</h2>
+
+    <table border="1" cellpadding="6" cellspacing="0">
+      <caption>Daily departures from Central Terminal</caption>
+      <thead>
+        <tr>
+          <th>Route</th>
+          <th>Departure</th>
+          <th>Arrival</th>
+          <th>Fare</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Station to Burnham</td>
+          <td>8:00 AM</td>
+          <td>8:30 AM</td>
+          <td>$20</td>
+        </tr>
+        <tr>
+          <td>Station to Mcdo</td>
+          <td>9:00 AM</td>
+          <td>9:40 AM</td>
+          <td>$17</td>
+        </tr>
+        <tr>
+          <td>Station to Bellchurch</td>
+          <td>10:00 AM</td>
+          <td>11:00 AM</td>
+          <td>$25</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>12:00 PM</td>
+            <td>1:00 PM</td>
+            <td>$11</td>
+          </tr>
+        <tr>
+          <td>Station to Public Market</td>
+          <td>2:30 PM</td>
+          <td>3:40 PM</td>
+          <td>$11</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Check The Route</h3>
+    <form action="#" method="get">
+      <p>
+        <label for="route">Choose a route:</label>
+        <select id="route" name="route">
+          <option value="city-hall">Station to Burnham</option>
+          <option value="university">Station to Bellchurch</option>
+          <option value="airport">Station to John Hayt</option>
+          <option value="public-market">Station to Public Market</option>
+        </select>
+        <button type="submit">Search</button>
+      </p>
+    </form>
+    <hr>
+  </section>
+  <section id="contact">
+    <h2>Contact &amp; Feedback</h2>
+
+    <form action="#" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <legend>Send Feedback</legend>
+
+        <p>
+          <label for="fb-name">Full name:</label>
+          <input type="text" id="fb-name" name="fb-name" required>
+        </p>
+
+        <p>
+          <label for="rating">Rate your ride (1-5):</label>
+          <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+        </p>
+
+        <p>
+          <label for="topic">Topic:</label>
+          <select id="topic" name="topic">
+            <option value="complaint">Complaint</option>
+            <option value="lost-item">Lost item</option>
+            <option value="suggestion">Suggestion</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+        </p>
+
+        <p>
+          <label for="photo">Attach a photo (optional):</label>
+          <input type="file" id="photo" name="photo" accept="image/*">
+        </p>
+
+        <p>
+          <button type="submit">Send Feedback</button>
+        </p>
+      </fieldset>
+    </form>
+
+    <h3>Reach Us</h3>
+    <address>
+      <strong>DenzRide Transport </strong><br>
+      67 South<br>
+      Baguio, Philippines<br>
+      Phone: <a href="tel:+6767676767">+09 676 676 676</a><br>
+      Email: <a href="mailto:@gmail.com">@gmail.com</a>
+    </address>
+    <hr>
+  </section>
+
+  <section id="links">
+    <h2>Useful Links</h2>
+    <ul>
+      <li><a href="https://wiki.openstreetmap.org/wiki/Philippines" target="_blank" rel="noopener">OpenStreetMap</a></li>
+      <li><a href="https://www.google.com/maps target="_blank" rel="noopener">Google Maps</a></li>
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">DenzRide on Facebook</a></li>
+      <li><a href="#top">Back to top</a></li>
+    </ul>
+  </section>
+
+  <section id="terms-info">
+    <h2>Terms &amp; Conditions</h2>
+    <details>
+      <summary>Read the terms</summary>
+      <ol>
+        <li>Bookings must be made at least 20 minutes before the pick-up time.</li>
+        <li>Cant not cancel after booking is sure</li>
+        <li>Passengers must follow the driver's safety instructions at all times.</li>
+      </ol>
+    </details>
+  </section>
+
+</main>
+
+<footer>
+  <hr>
+  <p>&copy; 2026 DenzRide Transport. CAPON, DENISE S></p>
+</footer>
+
+</body>
+</html>
+
+
+
+
+
